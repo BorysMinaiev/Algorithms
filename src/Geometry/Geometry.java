@@ -1,3 +1,5 @@
+package Geometry;
+
 public class Geometry {
     final static double eps = 1e-9;
 

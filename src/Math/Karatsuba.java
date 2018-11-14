@@ -1,5 +1,7 @@
 package Math;
 
+import java.util.Random;
+
 public class Karatsuba {
     final int mod = (int) 1e9 + 7;
     final long mod2 = mod * 1L * mod;
@@ -88,5 +90,24 @@ public class Karatsuba {
             res[i] %= mod;
         }
         return res;
+    }
+
+    void start() {
+        final int MAX = (int) 5e4;
+        long[] a = new long[MAX];
+        long[] b = new long[MAX];
+        Random rnd = new Random(123);
+        for (int i = 0; i < MAX; i++) {
+            a[i] = rnd.nextInt(mod);
+            b[i] = rnd.nextInt(mod);
+        }
+        long START = System.currentTimeMillis();
+        mult(a, b);
+        System.err.println(System.currentTimeMillis() - START);
+
+    }
+
+    public static void main(String[] args) {
+        new Karatsuba().start();
     }
 }

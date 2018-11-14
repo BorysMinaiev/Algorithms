@@ -1,4 +1,4 @@
-package FFT;
+package Math;
 
 import java.io.*;
 import java.util.*;
